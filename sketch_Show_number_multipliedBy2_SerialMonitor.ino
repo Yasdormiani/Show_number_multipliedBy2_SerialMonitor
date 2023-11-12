@@ -5,11 +5,15 @@ void setup() {
 
 void loop() {
   
-    if(Serial.available()){
-       String name = Serial.readString();
+    if(Serial.available()>0){
+      num = Serial.parseInt();
       int result = num*2;
-      Serial.print("recieved name:");
-      Serial.println(name);
+      Serial.print("number");
+      Serial.println(num);
+      Serial.print("result");
+      Serial.println(result);
+
     }
   
 }
+
